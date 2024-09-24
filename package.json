@@ -1,13 +1,30 @@
 {
   "name": "phaser-js-tutorial",
+  "type": "module",
   "private": true,
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "license": "GPL-3.0",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "npx simple-git-hooks",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix"
   },
-  "keywords": [],
-  "author": "",
-  "license": "CC BY-NC-SA 4.0"
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "phaser": "^3.85.2",
+    "pinia": "^2.2.2",
+    "vue": "^3.5.8"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^3.7.1",
+    "eslint": "^9.11.1",
+    "lint-staged": "^15.2.10",
+    "simple-git-hooks": "^2.11.1",
+    "vite": "^5.4.7"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
 }
