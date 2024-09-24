@@ -42,6 +42,18 @@ cd phaser-js-tutorial
 pnpm install
 ```
 
+Run tutorial source code:
+
+```bash
+# For example, you want run the `000_start_from_scratch` package:
+# dev
+pnpm -F tutorial_000 dev
+# build
+pnpm -F tutorial_000 build
+# preview
+pnpm -F tutorial_000 preview
+```
+
 ## Contents
 
 - [000. Start From Scratch](./packages/000_start_from_scratch/README.md)
